@@ -1,10 +1,11 @@
 import UIKit
 
 class QuizViewController: UIViewController, UIAlertViewDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //get_data_from_url(json_url)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +25,6 @@ class QuizViewController: UIViewController, UIAlertViewDelegate {
     var q9=0
     var q10=0
     var q11=0
-    
-    
     
     @IBOutlet weak var question1: UISegmentedControl!
     @IBOutlet weak var question2: UISegmentedControl!
@@ -66,19 +65,57 @@ class QuizViewController: UIViewController, UIAlertViewDelegate {
         }
     }*/
     
+    
+
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "calculateScoreSegue"{
             
+            enum ErrorHandler:ErrorType
+            {
+                case ErrorFetchingResults
+            }
+            
+            struct datastruct
+            {
+                var passingData = 0
+                
+                init(add: NSDictionary)
+                {
+                    passingData = (add["PassingScore"] as? Int)!
+                    print(passingData)
+                }
+            }
+            
             //ทำการรวมคะแนนการ segment control ที่ผู้ใช้เลือกคำตอบ
             count = question1.selectedSegmentIndex+question2.selectedSegmentIndex+question3.selectedSegmentIndex+question4.selectedSegmentIndex+question5.selectedSegmentIndex+question6.selectedSegmentIndex+question7.selectedSegmentIndex+question8.selectedSegmentIndex+question9.selectedSegmentIndex+question10.selectedSegmentIndex+question11.selectedSegmentIndex
             
+            //นำ count ที่ได้ไปเปรียบเทียบบน database ว่าผลลัพธ์จะออกมาเป็นอย่างไร
+                //รอโค้ด
+
+            //เป็น label ที่ให้แสดงค่าคะแนนว่าทำได้กี่คะแนน
             pointLabel.text = String(count)
-            print(pointLabel)
+            
+            //กำหนด
             let vc = segue.destinationViewController as! ResultViewController
             vc.scoreString = pointLabel.text!
-            print("pointlabel = ",pointLabel.text!)
+            //print("pointlabel = ",pointLabel.text!)
+            if count >= 4 {
+                vc.resultString = "คุณมีความเสี่ยงเป็นผู้ป่วยโรคอัลไซเมอร์"
+            }
+            else {
+                vc.resultString = "คุณยังไม่มีความเสี่ยงเป็นโรคอัลไซเมอร์"
+            }
         }
+    }
+    
+    //ทำให้หน้าจอแอพเป็นแนวตั้งอย่างเดียว
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
     
 }
