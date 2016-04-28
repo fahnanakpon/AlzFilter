@@ -86,8 +86,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFO-IE-ftg">
                                 <rect key="frame" x="0.0" y="85" width="320" height="463"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O8-KX-66L">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="625"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O8-KX-66L">
+                                        <rect key="frame" x="0.0" y="-170" width="320" height="625"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="8. เริ่มต้องมีคนคอยช่วยเหลือกิจกรรมประจำวัน  เช่น การรับประทานอาหาร" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qG6-8y-vAj">
                                                 <rect key="frame" x="8" y="343" width="240" height="50"/>
@@ -163,7 +163,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="submit:" destination="Ud9-4v-z2R" eventType="touchUpInside" id="Fxi-Ay-mCb"/>
-                                                    <segue destination="N6P-hD-kAM" kind="show" identifier="calculateScoreSegue" id="Des-tu-eDZ"/>
+                                                    <segue destination="N6P-hD-kAM" kind="show" identifier="calculateScoreSegue" id="gsg-ac-M0Q"/>
                                                 </connections>
                                             </button>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QnP-NQ-2xA">
@@ -339,12 +339,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nc-WJ-B5d">
-                                <rect key="frame" x="182" y="234" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="คุณเข้าข่ายเป็นผู้ป่วยโรคอัลไซเมอร์" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtE-lq-5UV">
                                 <rect key="frame" x="38" y="281" width="244" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -382,12 +376,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nc-WJ-B5d">
+                                <rect key="frame" x="110" y="224" width="99" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="score" destination="8Nc-WJ-B5d" id="1n2-iL-Gxa"/>
+                        <outlet property="score" destination="8Nc-WJ-B5d" id="GjJ-wF-QKZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMv-Zt-9U0" userLabel="First Responder" sceneMemberID="firstResponder"/>
