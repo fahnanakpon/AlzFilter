@@ -15,7 +15,6 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         score.text = scoreString
         result.text = resultString
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

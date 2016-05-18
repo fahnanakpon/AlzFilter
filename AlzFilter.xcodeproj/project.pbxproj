@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F31827C1CD8E30400AAC4D2 /* FilterLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F31827A1CD8E30400AAC4D2 /* FilterLogo.png */; };
+		9F31827D1CD8E30400AAC4D2 /* FilterResult.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F31827B1CD8E30400AAC4D2 /* FilterResult.png */; };
+		9F3182891CD8E69000AAC4D2 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3182861CD8E69000AAC4D2 /* QuizViewController.swift */; };
+		9F31828A1CD8E69000AAC4D2 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3182871CD8E69000AAC4D2 /* ResultViewController.swift */; };
+		9F31828B1CD8E69000AAC4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3182881CD8E69000AAC4D2 /* ViewController.swift */; };
+		9F31828D1CD8E73500AAC4D2 /* ResultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31828C1CD8E73500AAC4D2 /* ResultHelper.swift */; };
 		9F5A23B11C9B25EC0014408F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A23B01C9B25EC0014408F /* AppDelegate.swift */; };
-		9F5A23B31C9B25EC0014408F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A23B21C9B25EC0014408F /* ViewController.swift */; };
 		9F5A23B61C9B25EC0014408F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A23B41C9B25EC0014408F /* Main.storyboard */; };
 		9F5A23B81C9B25EC0014408F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A23B71C9B25EC0014408F /* Assets.xcassets */; };
 		9F5A23BB1C9B25EC0014408F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5A23B91C9B25EC0014408F /* LaunchScreen.storyboard */; };
 		9F5A23C61C9B25EC0014408F /* AlzFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A23C51C9B25EC0014408F /* AlzFilterTests.swift */; };
 		9F5A23D11C9B25EC0014408F /* AlzFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5A23D01C9B25EC0014408F /* AlzFilterUITests.swift */; };
-		9FF5B17B1CC8999C00423359 /* FilterLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FF5B1791CC8999C00423359 /* FilterLogo.jpg */; };
-		9FF5B17C1CC8999C00423359 /* FilterResult.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FF5B17A1CC8999C00423359 /* FilterResult.jpg */; };
-		9FF5B17E1CC899DD00423359 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5B17D1CC899DD00423359 /* QuizViewController.swift */; };
-		9FF5B1801CC89AC300423359 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF5B17F1CC89AC300423359 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F31827A1CD8E30400AAC4D2 /* FilterLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FilterLogo.png; sourceTree = "<group>"; };
+		9F31827B1CD8E30400AAC4D2 /* FilterResult.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FilterResult.png; sourceTree = "<group>"; };
+		9F3182861CD8E69000AAC4D2 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		9F3182871CD8E69000AAC4D2 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		9F3182881CD8E69000AAC4D2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F31828C1CD8E73500AAC4D2 /* ResultHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultHelper.swift; sourceTree = "<group>"; };
 		9F5A23AD1C9B25EC0014408F /* AlzFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5A23B01C9B25EC0014408F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F5A23B21C9B25EC0014408F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F5A23B51C9B25EC0014408F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F5A23B71C9B25EC0014408F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F5A23BA1C9B25EC0014408F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,10 +57,6 @@
 		9F5A23CC1C9B25EC0014408F /* AlzFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5A23D01C9B25EC0014408F /* AlzFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzFilterUITests.swift; sourceTree = "<group>"; };
 		9F5A23D21C9B25EC0014408F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FF5B1791CC8999C00423359 /* FilterLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FilterLogo.jpg; path = ../../Project/Images/FilterLogo.jpg; sourceTree = "<group>"; };
-		9FF5B17A1CC8999C00423359 /* FilterResult.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FilterResult.jpg; path = ../../Project/Images/FilterResult.jpg; sourceTree = "<group>"; };
-		9FF5B17D1CC899DD00423359 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		9FF5B17F1CC89AC300423359 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +107,14 @@
 		9F5A23AF1C9B25EC0014408F /* AlzFilter */ = {
 			isa = PBXGroup;
 			children = (
-				9FF5B1791CC8999C00423359 /* FilterLogo.jpg */,
-				9FF5B17A1CC8999C00423359 /* FilterResult.jpg */,
-				9F5A23B01C9B25EC0014408F /* AppDelegate.swift */,
+				9F3182861CD8E69000AAC4D2 /* QuizViewController.swift */,
+				9F3182871CD8E69000AAC4D2 /* ResultViewController.swift */,
+				9F3182881CD8E69000AAC4D2 /* ViewController.swift */,
+				9F31828C1CD8E73500AAC4D2 /* ResultHelper.swift */,
 				9F5A23B41C9B25EC0014408F /* Main.storyboard */,
-				9F5A23B21C9B25EC0014408F /* ViewController.swift */,
-				9FF5B17D1CC899DD00423359 /* QuizViewController.swift */,
-				9FF5B17F1CC89AC300423359 /* ResultViewController.swift */,
+				9F31827A1CD8E30400AAC4D2 /* FilterLogo.png */,
+				9F31827B1CD8E30400AAC4D2 /* FilterResult.png */,
+				9F5A23B01C9B25EC0014408F /* AppDelegate.swift */,
 				9F5A23B71C9B25EC0014408F /* Assets.xcassets */,
 				9F5A23B91C9B25EC0014408F /* LaunchScreen.storyboard */,
 				9F5A23BC1C9B25EC0014408F /* Info.plist */,
@@ -242,9 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF5B17B1CC8999C00423359 /* FilterLogo.jpg in Resources */,
+				9F31827C1CD8E30400AAC4D2 /* FilterLogo.png in Resources */,
 				9F5A23BB1C9B25EC0014408F /* LaunchScreen.storyboard in Resources */,
-				9FF5B17C1CC8999C00423359 /* FilterResult.jpg in Resources */,
+				9F31827D1CD8E30400AAC4D2 /* FilterResult.png in Resources */,
 				9F5A23B81C9B25EC0014408F /* Assets.xcassets in Resources */,
 				9F5A23B61C9B25EC0014408F /* Main.storyboard in Resources */,
 			);
@@ -271,10 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF5B17E1CC899DD00423359 /* QuizViewController.swift in Sources */,
-				9F5A23B31C9B25EC0014408F /* ViewController.swift in Sources */,
+				9F31828D1CD8E73500AAC4D2 /* ResultHelper.swift in Sources */,
 				9F5A23B11C9B25EC0014408F /* AppDelegate.swift in Sources */,
-				9FF5B1801CC89AC300423359 /* ResultViewController.swift in Sources */,
+				9F3182891CD8E69000AAC4D2 /* QuizViewController.swift in Sources */,
+				9F31828B1CD8E69000AAC4D2 /* ViewController.swift in Sources */,
+				9F31828A1CD8E69000AAC4D2 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

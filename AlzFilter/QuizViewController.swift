@@ -1,5 +1,7 @@
 import UIKit
 
+//typealias QuizViewControllerCallback = UIViewController? -> Void
+
 class QuizViewController: UIViewController, UIAlertViewDelegate {
     
     override func viewDidLoad() {
@@ -7,11 +9,16 @@ class QuizViewController: UIViewController, UIAlertViewDelegate {
         // Do any additional setup after loading the view.
         //get_data_from_url(json_url)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    /*
+    weak var viewController: UIViewController!
+    var callback: ResultHelperCallback
+    var imagePickerController: UIImagePickerController!
+    
+    init(viewController: UIViewController, callback: QuizViewControllerCallback){
+        self.viewController = viewController
+        self.callback = callback
+    }*/
     
     var count=0
     var q1=0
@@ -38,34 +45,88 @@ class QuizViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var question10: UISegmentedControl!
     @IBOutlet weak var question11: UISegmentedControl!
     
+    var resultHelper : ResultHelper?
+    
+    /*
+    func pressSubmit(){
+        resultHelper = ResultHelper(viewController: self.submit(<#T##sender: UIButton##UIButton#>)){
+            (image:UIImage?) in
+            //do nothing yet
+        }
+    }*/
+    
+    /*
+    func showAlert(){
+        //สร้าง Actionsheet
+        let alertController = UIAlertController(title: nil, message:"คุณแน่ใจหรือไม่ว่าต้องการดูผลลัพธ์", preferredStyle: .ActionSheet)
+        
+        let pressBack = UIAlertAction(title: "กลับไปแก้ไข", style: .Cancel, handler: nil)
+        alertController.addAction(pressBack)
+        
+        let pressNext = UIAlertAction(title: "ดูผลลัพธ์", style: .Default ) { (action) in
+            self.showImagePickerController(.Camera)
+        }
+        alertController.addAction(pressNext)
+        
+        let pressAlbum = UIAlertAction(title: "เลือกภาพจากอัลบั้ม", style: .Default ) { (action) in
+            self.showImagePickerController(.PhotoLibrary)
+        }
+        alertController.addAction(pressAlbum)
+        
+        viewController.presentViewController(alertController, animated: true, completion: nil)
+    }
+
+    func showImagePickerController(sourceType: UIImagePickerControllerSourceType){
+        imagePickerController = UIImagePickerController()
+        imagePickerController!.sourceType = sourceType
+        self.viewController.presentViewController(imagePickerController!, animated: true, completion: nil)
+        
+    }*/
     
     @IBOutlet weak var pointLabel: UILabel!
+    
+    func showAlertSelection(){
+        let alertController = UIAlertController(title: nil, message: "คุณแน่ใจกับคำตอบที่เลือกแล้วหรือไม่", preferredStyle: .Alert)
+        
+        let backAction = UIAlertAction(title: "กลับไปแก้ไข", style: .Cancel, handler: nil)
+        alertController.addAction(backAction)
+        
+        let submitAction = UIAlertAction(title: "ดูผลทดสอบ", style: .Default, handler: nil)
+        alertController.addAction(submitAction)
+    }
     
 
     @IBAction func submit(sender: UIButton) {
         
-        /*let alertView = UIAlertView(title: "แจ้งเตือน!", message: "คุณแน่ใจว่าคำตอบของคุณถูกต้องครบถ้วน?", delegate: self, cancelButtonTitle: "กลับไปแก้ไข", otherButtonTitles: "ดูผลการทดสอบ")
+        /*
+        let alertView = UIAlertView(title: "แจ้งเตือน!", message: "คุณแน่ใจว่าคำตอบของคุณถูกต้องครบถ้วน?", delegate: self, cancelButtonTitle: "กลับไปแก้ไข", otherButtonTitles: "ดูผลการทดสอบ")
         
         alertView.tag = 1
         
-        alertView.show()*/
+        alertView.show()
+        */
     }
     
     // ให้มี Pop Up ถามว่าต้องการแก้ไขคำตอบไหม หรือจะดูผลการทดสอบเลย
-    /*func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
         if alertView.tag == 1 {
             //ถ้ากด กลับไปแก้ไข
             if buttonIndex == 0 {
                 print("ผู้ใช้กด กลับไปแก้ไข")
                 
             } else {
+                test()
                 print("ผู้ใช้กด ดูผลการทดสอบ")
-
+                
             }
         }
-    }*/
+    }
     
+    let vc = ResultViewController()
     
+    func test(){
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
